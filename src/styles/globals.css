@@ -17,13 +17,22 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: #4d5568;
+  background: #f3f5f9;
+}
+
+.PhoneInputCountry {
+  background-color: #e2e8f0;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.PhoneInputInput:focus {
+  outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* display: none; */
 }
 
 @layer utilities {

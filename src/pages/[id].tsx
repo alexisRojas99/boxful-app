@@ -1,10 +1,11 @@
-import { Inter } from "next/font/google";
+import OrderDetail from "@/components/order/OrderDetail";
 import Head from "next/head";
-import Order from "@/components/order/Order";
+import { useRouter } from "next/router";
+import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const Detail = () => {
+  const router = useRouter();
 
-export default function Index() {
   return (
     <>
       <Head>
@@ -19,9 +20,9 @@ export default function Index() {
           content="Boxful provee fulfillment ultra-rápido, gestión de envíos y una red de lockers inteligentes para habilitar entregas el mismo día o al día siguiente a marcas de e-commerce y online sellers en Latinoamérica."
         />
       </Head>
-      <main>
-        <Order />
-      </main>
+      <OrderDetail orderDetail={router.query || {}} />
     </>
   );
-}
+};
+
+export default Detail;
